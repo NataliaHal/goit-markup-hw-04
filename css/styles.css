@@ -435,13 +435,17 @@ body {
 .portfolio-box {
   height: 404px;
   width: 370px;
-  color: var(--primary-white-color);
 
   padding-bottom: 0;
 }
 
-.portfolio-box:hover,
-.portfolio-boxfocus {
+.portfolio {
+  color: var(--primary-white-color);
+  display: block;
+}
+
+.portfolio:hover,
+.portfolio:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -478,8 +482,12 @@ body {
   gap: 30px;
 }
 
-.logo-link-icon:active {
-  color: rgba(33, 150, 243, 1);
+.logo-link-icon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo-list-icon {
@@ -488,13 +496,20 @@ body {
   border-radius: 4px;
   width: 170px;
   height: 92px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+}
+
+.logo-list-icon:hover,
+.logo-list-icon:focus {
+  border: 1px solid #2196f3;
 }
 
 .logo-item-icon {
   fill: rgba(175, 177, 184, 1);
+}
+
+.logo-item-icon:hover,
+.logo-item-icon:focus {
+  fill: rgba(33, 150, 243, 1);
 }
 
 .footer {
@@ -579,6 +594,8 @@ body {
 .filter-button:focus {
   background-color: var(--button-hover-color);
   color: var(--primary-white-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 .button-portfolio-section {
